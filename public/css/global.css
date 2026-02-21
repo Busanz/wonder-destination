@@ -1,0 +1,204 @@
+:root {
+  --background-color: #03021e;
+  --accent-color: #00c8ff;
+  --text-color: #cdcce0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+h1 {
+  font-weight: 300;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.header_logo {
+  cursor: pointer;
+}
+
+.header_logo-text {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.header_logo-text span {
+  color: var(--accent-color);
+}
+.header_link {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 5px 14px;
+}
+.header_link:hover {
+  color: var(--accent-color);
+  padding: 5px 14px;
+}
+.home {
+  position: relative;
+  background-image: url('../images/home_bg.webp');
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+}
+
+.home_overlay {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #03021ea1;
+}
+.home_title {
+  font-weight: 400;
+  font-size: 3.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.home_title-special {
+  color: var(--accent-color);
+}
+.home_des {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin-bottom: 2.3rem;
+}
+
+.home_button {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+.home_button:hover {
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  border: 0.5px solid var(--accent-color);
+}
+
+.heritage {
+  position: relative;
+  background-image: url('../images/heritage_bg.jpg');
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heritage_wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+}
+
+.heritage_overlay {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #03021ea1;
+}
+
+.coastal {
+  position: relative;
+  background-image: url('../images/coastal_bg.jpg');
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coastal_wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+}
+
+.coastal_overlay {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #03021ea1;
+}
+
+.page_section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.place_card {
+  max-width: 500px;
+  margin: 2rem;
+  cursor: pointer;
+}
+.place_card:hover img {
+  overflow: hidden;
+  transform: scale(0.99);
+}
+
+.place_content {
+  margin-top: 2rem;
+}
+
+.place_content h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.footer_button {
+  padding: 0.7rem;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+}
+.footer_button:hover {
+  color: #adabfe;
+  cursor: pointer;
+}
