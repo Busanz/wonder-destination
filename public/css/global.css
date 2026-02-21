@@ -165,15 +165,14 @@ h1 {
   justify-content: center;
   margin-top: 2rem;
 }
-
 .place_card {
   max-width: 500px;
   margin: 2rem;
-  cursor: pointer;
 }
 .place_card:hover img {
   overflow: hidden;
   transform: scale(0.99);
+  cursor: pointer;
 }
 
 .place_content {

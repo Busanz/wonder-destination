@@ -11,5 +11,7 @@
 
   <link rel="stylesheet" href="/css/global.css" />
 
-  <title><%= pageTitle || 'Page' %></title>
+  <title>
+    <%= (locals.pageTitle && pageTitle.length > 0) ? pageTitle : 'Page' %>
+  </title>
 </head>

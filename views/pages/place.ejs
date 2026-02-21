@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <h1><%= placeName %></h1>
+      <p><%= placeDes %></p>
+      <img src="<%= imageUrl %>" alt="The place <%= placeName %>" />
+      <div>
+        <h3>Highlights</h3>
+        <% placeHighlights.forEach( item => { %>
+        <p><%= item %></p>
+        <% }); %>
+      </div>
+      <div>
+        <h3>TravelTips</h3>
+        <% placeTravelTips.forEach( item => { %>
+        <p><%= item %></p>
+        <% }); %>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

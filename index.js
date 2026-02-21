@@ -23,17 +23,31 @@ app.get('/', (req, res) => {
 app.use('/heritage', navigation('heritage'));
 app.use('/coastal', navigation('coastal'));
 
+app.get('/:urlItem/:urlPlace', (req, res) => {
+  let URLPlace = req.params.urlPlace;
+  URLPlace = URLPlace.charAt(0).toUpperCase() + URLPlace.slice(1);
+  const placeSelected = places.find((place) => place.placeName === URLPlace);
+
+  res.render(path.join(__dirname, '/views/pages/place'), {
+    pageTitle: URLPlace,
+    ...placeSelected,
+  });
+});
+
 app.get('/:urlItem', (req, res) => {
   const pageData = pagesDetails.find(
     (page) => page.pageName === req.params.urlItem,
   );
+  const urlItem = req.params.urlItem;
+  const pageTitle =
+    urlItem.charAt(0).toUpperCase() + urlItem.slice(1).toLowerCase() + ` page`;
 
   const filteredPlaces = places.filter(
     (place) => place.placeType === req.params.urlItem,
   );
   console.log(filteredPlaces);
   res.render(path.join(__dirname, `/views/pages/pages`), {
-    pageTitle: 'Home page',
+    pageTitle: pageTitle,
     ...pageData,
     filteredPlaces,
   });

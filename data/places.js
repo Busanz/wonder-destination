@@ -35,7 +35,7 @@ const places = [
   },
   {
     placeType: 'coastal',
-    placeName: 'Galle Fort',
+    placeName: 'Galle',
     placeDes: `Galle Fort is a living museum a UNESCO listed Dutch colonial fortress where cobblestone lanes wind past art galleries, boutique cafes, and centuries old churches. Perched on the southwestern tip of the island, the fort's ramparts offer golden-hour views over the Indian Ocean.`,
     placeHighlights: [
       'Walk the fort ramparts at sunset',
