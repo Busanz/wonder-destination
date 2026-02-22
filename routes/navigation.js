@@ -2,15 +2,13 @@ import express from 'express';
 import * as path from 'path';
 import pagesDetails from '../data/pagesDetails.js';
 import places from '../data/places.js';
+import { convertFirstLetterCapital } from '../public/scripts/script.js';
 
 const __dirname = path.resolve();
 
 const navigation = (routelink) => {
   const router = express.Router();
-  const pageTitle =
-    routelink.charAt(0).toUpperCase() +
-    routelink.slice(1).toLowerCase() +
-    ` page`;
+  const pageTitle = convertFirstLetterCapital(routelink);
 
   router.get('/', (req, res) => {
     const pageData = pagesDetails.find((page) => page.pageName === routelink);

@@ -1,11 +1,12 @@
 <div class="place_card">
-  <img
-    src="<%= place.imageUrl %>"
-    alt="<%= place.placeName %>"
-    width="500px"
-    height="350px"
-  />
-
+  <a href="/<%= place.placeType %>/<%= place.placeName.toLowerCase() %>">
+    <img
+      src="<%= place.imageUrl %>"
+      alt="<%= place.placeName %>"
+      width="500px"
+      height="350px"
+    />
+  </a>
   <div class="place_content">
     <h3><%= place.placeName %></h3>
     <p>

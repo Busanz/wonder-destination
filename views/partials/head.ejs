@@ -8,8 +8,13 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
     rel="stylesheet"
   />
+  <link rel="icon" type="image/png" href="/favicon.png" />
 
   <link rel="stylesheet" href="/css/global.css" />
+  <script type="module" src="/scripts/script.js" defer></script>
+  <script src="/scripts/activeLink.js" defer></script>
 
-  <title><%= pageTitle || 'Page' %></title>
+  <title>
+    <%= (locals.pageTitle && pageTitle.length > 0) ? pageTitle : 'Page' %>
+  </title>
 </head>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main class="main_place">
+      <h1 class="main_place_title"><%= placeName %></h1>
+      <p class="main_place_des"><%= placeDes %></p>
+      <img
+        src="<%= imageUrl %>"
+        alt="The place <%= placeName %>"
+        class="main_place_image"
+      />
+      <%- showListItem('Highlights', placeHighlights) %> <%-
+      showListItem(`Travel Tips`, placeTravelTips) %>
+      <button
+        class="main_place_button"
+        onclick="window.location.href = '/<%= placeType %>'"
+      >
+        Go back ←
+      </button>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
