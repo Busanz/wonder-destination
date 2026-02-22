@@ -31,7 +31,10 @@ h1 {
   align-items: center;
   padding: 2rem;
 }
-
+.header_logolink {
+  text-decoration: none;
+  color: var(--text-color);
+}
 .header_logo {
   cursor: pointer;
 }
