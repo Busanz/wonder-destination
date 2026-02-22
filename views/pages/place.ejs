@@ -3,22 +3,22 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main>
-      <h1><%= placeName %></h1>
-      <p><%= placeDes %></p>
-      <img src="<%= imageUrl %>" alt="The place <%= placeName %>" />
-      <div>
-        <h3>Highlights</h3>
-        <% placeHighlights.forEach( item => { %>
-        <p><%= item %></p>
-        <% }); %>
-      </div>
-      <div>
-        <h3>TravelTips</h3>
-        <% placeTravelTips.forEach( item => { %>
-        <p><%= item %></p>
-        <% }); %>
-      </div>
+    <main class="main_place">
+      <h1 class="main_place_title"><%= placeName %></h1>
+      <p class="main_place_des"><%= placeDes %></p>
+      <img
+        src="<%= imageUrl %>"
+        alt="The place <%= placeName %>"
+        class="main_place_image"
+      />
+      <%- showListItem('Highlights', placeHighlights) %> <%-
+      showListItem(`Travel Tips`, placeTravelTips) %>
+      <button
+        class="main_place_button"
+        onclick="window.location.href = '/<%= placeType %>'"
+      >
+        Go back ←
+      </button>
     </main>
     <%- include('../partials/footer') %>
   </body>

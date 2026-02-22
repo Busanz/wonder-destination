@@ -28,7 +28,7 @@ const places = [
     ],
     placeTravelTips: [
       'Visit the temple during puja ceremonies for the full experience',
-      "Take the scenic train from Kandy to Ella — one of the world's best rail journeys",
+      "Take the scenic train from Kandy to Ella, one of the world's best rail journeys",
       'Dress modestly (cover shoulders and knees) when visiting temples',
     ],
     imageUrl: '/images/kandy.png',

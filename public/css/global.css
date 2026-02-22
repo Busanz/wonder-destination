@@ -36,6 +36,12 @@ h1 {
   font-weight: 700;
   font-size: 1.4rem;
 }
+.mobile_hamberger {
+  display: none;
+}
+.header_nav {
+  display: block;
+}
 .header_logo-text span {
   color: var(--accent-color);
 }
@@ -43,6 +49,9 @@ h1 {
   text-decoration: none;
   color: var(--text-color);
   padding: 5px 14px;
+}
+.header_link.active {
+  color: var(--accent-color);
 }
 .header_link:hover {
   color: var(--accent-color);
@@ -160,6 +169,21 @@ h1 {
   background-color: #03021ea1;
 }
 
+.page_button {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+.page_button:hover {
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  border: 0.5px solid var(--accent-color);
+}
+
 .page_section {
   display: flex;
   justify-content: center;
@@ -184,10 +208,57 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.main_place {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  justify-self: center;
+  margin: 1rem 2rem 5rem 2rem;
+}
+
+.main_place_title {
+  text-align: left;
+}
+.main_place_des {
+  line-height: 1.5;
+}
+.main_place_des,
+.main_place_image,
+.main_place_list {
+  padding-bottom: 2rem;
+}
+.main_place_list h3 {
+  padding-bottom: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.main_place_list-item {
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+  padding-bottom: 0.5rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.main_place_button {
+  border: none;
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 12px 24px 12px 0;
+  text-align: left;
+  width: fit-content;
+}
+.main_place_button:hover {
+  color: var(--text-color);
+}
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 3rem 2rem;
+  background-color: var(--accent-color);
+  color: var(--background-color);
 }
 
 .footer_button {
@@ -200,4 +271,14 @@ h1 {
 .footer_button:hover {
   color: #adabfe;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile_hamberger {
+    display: block;
+  }
+
+  .header_nav {
+    display: none;
+  }
 }
