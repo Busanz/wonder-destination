@@ -18,7 +18,6 @@ closeBtn.addEventListener('click', () => {
 });
 
 navLinks.forEach((link) => {
-  console.log(link.getAttribute('href'), window.location.pathname);
   if (link.getAttribute('href') === window.location.pathname) {
     link.classList.add('active');
   } else {
