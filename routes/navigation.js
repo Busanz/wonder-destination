@@ -13,6 +13,10 @@ const navigation = (routelink) => {
   router.get('/', (req, res) => {
     const pageData = pagesDetails.find((page) => page.pageName === routelink);
 
+    if (!pageData) {
+      return res.status(404).send('Place category was not found');
+    }
+
     const filteredPlaces = places.filter(
       (place) => place.placeType === routelink,
     );

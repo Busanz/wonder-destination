@@ -1,3 +1,4 @@
+<% if (locals.place) { %>
 <div class="place_card">
   <a href="/<%= place.placeType %>/<%= place.placeName.toLowerCase() %>">
     <img
@@ -10,8 +11,8 @@
   <div class="place_content">
     <h3><%= place.placeName %></h3>
     <p>
-      <%= place.placeDes.length > 150 ? place.placeDes.substring(0, 150) + '...'
-      : place.placeDes %>
+      <%= place.placeDes.length > 150 ? place.placeDes.substring(0, 150) + '...' : place.placeDes %>
     </p>
   </div>
 </div>
+<% } %>

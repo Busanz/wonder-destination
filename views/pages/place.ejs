@@ -3,6 +3,7 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
+    <% if(locals.placeName && locals.placeDes && locals.imageUrl) {%>
     <main class="main_place">
       <h1 class="main_place_title"><%= placeName %></h1>
       <p class="main_place_des"><%= placeDes %></p>
@@ -13,8 +14,14 @@
         height="auto"
         class="main_place_image"
       />
-      <%- showListItem('Highlights', placeHighlights) %> <%-
-      showListItem(`Travel Tips`, placeTravelTips) %>
+
+      <% if (locals.placeHighlights && placeHighlights.length > 0) { %>
+        <%- showListItem('Highlights', placeHighlights) %>
+      <% } %>
+      <% if (locals.placeTravelTips && placeTravelTips.length > 0) { %>
+        <%- showListItem('Travel Tips', placeTravelTips) %>
+      <% } %>
+      
       <button
         class="main_place_button"
         onclick="window.location.href = '/<%= placeType %>'"
@@ -22,6 +29,9 @@
         Go back ←
       </button>
     </main>
+    <% }else{ %>
+      <p>Place data was not found</p>
+    <% } %>
     <%- include('../partials/footer') %>
   </body>
 </html>
